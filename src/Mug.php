@@ -113,6 +113,6 @@ class Mug
                 'xoserveAddressCodes' => $address['xoserveAddressCode']
             ])
             ->throw()
-            ->json();
+            ->json()[0];
     }
 }
