@@ -1,0 +1,40 @@
+{
+    "name": "mralston/mug",
+    "description": "Library for working with My Utility Genius API.",
+    "keywords": [
+        "mralston",
+        "laravel",
+        "pdf"
+    ],
+    "homepage": "https://github.com/mralston/mug",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Ralston",
+            "email": "matt@mralston.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4.15|^8.0",
+        "illuminate/http": "^7.0|^8.0|^9.0|^10.0",
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mralston\\Mug\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mralston\\Mug\\Providers\\MugServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
