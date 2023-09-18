@@ -110,7 +110,8 @@ class Mug
         return Http::withHeader('Authorization', 'Bearer ' . $this->token)
             ->post($this->endpoint . '/request/Address/recco/details', [
                 'mpanCores' => $address['mpancore'],
-                'xoserveAddressCodes' => $address['xoserveAddressCode']
+                'xoserveAddressCodes' => $address['xoserveAddressCode'],
+                'isElectricityEacNeeded' => true,
             ])
             ->throw()
             ->json()[0];
