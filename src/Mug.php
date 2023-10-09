@@ -73,7 +73,7 @@ class Mug
 
         $json = Http::withHeader('Authorization', 'Bearer ' . $this->token)
             ->post($this->endpoint . '/request/Address/Postcode/Ready', [
-                'postcodeReadyBindingModel' => $postCode,
+                'postcode' => $postCode,
             ])
             ->throw()
             ->json();
