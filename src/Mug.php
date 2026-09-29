@@ -2,8 +2,10 @@
 
 namespace Mralston\Mug;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class Mug
 {
@@ -107,7 +109,7 @@ class Mug
 
         $this->authenticate();
 
-        return Http::withHeader('Authorization', 'Bearer ' . $this->token)
+        $json = Http::withHeader('Authorization', 'Bearer ' . $this->token)
             ->post($this->endpoint . '/request/Address/recco/details', [
                 'mpanCores' => $address['mpancore'],
                 'xoserveAddressCodes' => $address['xoserveAddressCode'],
@@ -115,5 +117,16 @@ class Mug
             ])
             ->throw()
             ->json()[0];
+
+        // MUG are overpadding the MPAN number to 22 digits. It should be 20-21.
+        Arr::set(
+            $json,
+            'elecdetails.0.mpan',
+            Str::of(Arr::get($json, 'elecdetails.0.mpan'))
+                ->substr(-21)
+                ->toString()
+        );
+
+        return $json;
     }
 }
