@@ -2,10 +2,8 @@
 
 namespace Mralston\Mug;
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Str;
 
 class Mug
 {
@@ -118,15 +116,9 @@ class Mug
             ->throw()
             ->json()[0];
 
-        // MUG are overpadding the MPAN number to 22 digits. It should be 20-21.
-        Arr::set(
-            $json,
-            'elecdetails.0.mpan',
-            Str::of(Arr::get($json, 'elecdetails.0.mpan'))
-                ->substr(-21)
-                ->toString()
-        );
-
+        // The MPAN is returned as given. A 22 digit one is not padded: it is the MHHS layout,
+        // whose top line has a four digit Standard Settlement Configuration where the legacy
+        // layout has a three digit meter timeswitch code.
         return $json;
     }
 }
