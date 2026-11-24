@@ -1,0 +1,33 @@
+{
+  "apiVersion": "v1",
+  "uri": "https://api-home.example.invalid/request/Tariffs/export/tariff/900201/prices",
+  "tariff": {
+    "tariffId": 900201,
+    "supplierId": 9001,
+    "tariffName": "Example Export Flex",
+    "supplierName": "Example Energy",
+    "prices": [
+      {
+        "dno": 19,
+        "paymentId": 1,
+        "rates": [
+          {
+            "unitRate": 24.57,
+            "displayName": "Peak export",
+            "periods": [
+              {"monthFrom": "1", "monthTo": "12", "weekdayFrom": "1", "weekdayTo": "5", "timeFrom": "16:00", "timeTo": "19:00"}
+            ]
+          },
+          {
+            "unitRate": 15.0,
+            "displayName": "Export",
+            "periods": [
+              {"monthFrom": "1", "monthTo": "12", "weekdayFrom": "1", "weekdayTo": "5", "timeFrom": "19:00", "timeTo": "16:00"},
+              {"monthFrom": "1", "monthTo": "12", "weekdayFrom": "6", "weekdayTo": "7", "timeFrom": "00:00", "timeTo": "00:00"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

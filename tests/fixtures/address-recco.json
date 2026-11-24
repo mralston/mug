@@ -1,0 +1,38 @@
+[
+  {
+    "companyName": null,
+    "uprn": "999999999002",
+    "addressLine1": "2 Example Street",
+    "addressLine2": null,
+    "city": "Sampletown",
+    "county": "Testshire",
+    "postcode": "ZZ99 9ZZ",
+    "text": "2 Example Street, Sampletown, ZZ99 9ZZ",
+    "addressType": "Residential",
+    "longitude": "0.000000",
+    "latitude": "0.000000",
+    "mpancore": ["1999999999002"],
+    "xoserveAddressCode": ["9999999002"],
+    "elecdetails": [],
+    "gasdetails": [],
+    "fault": []
+  },
+  {
+    "companyName": null,
+    "uprn": "999999999001",
+    "addressLine1": "1 Example Street",
+    "addressLine2": null,
+    "city": "Sampletown",
+    "county": "Testshire",
+    "postcode": "ZZ99 9ZZ",
+    "text": "1 Example Street, Sampletown, ZZ99 9ZZ",
+    "addressType": "Residential",
+    "longitude": "0.000000",
+    "latitude": "0.000000",
+    "mpancore": ["1999999999001"],
+    "xoserveAddressCode": ["9999999001"],
+    "elecdetails": [],
+    "gasdetails": [],
+    "fault": []
+  }
+]

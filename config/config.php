@@ -29,4 +29,17 @@ return [
     */
 
     'endpoint' => env('MUG_ENDPOINT'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Token cache
+    |--------------------------------------------------------------------------
+    |
+    | The cache store the access token is kept in until shortly before it
+    | expires, so each request does not sign in again. Empty uses the
+    | application's default store.
+    |
+    */
+
+    'token_cache_store' => env('MUG_TOKEN_CACHE_STORE'),
 ];

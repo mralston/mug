@@ -2,40 +2,37 @@
 
 namespace Mralston\Mug\Providers;
 
+use Illuminate\Contracts\Cache\Factory as CacheFactory;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Mralston\Mug\Mug;
 
 class MugServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'mug');
-    }
+        $this->mergeConfigFrom(__DIR__.'/../../config/config.php', 'mug');
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->app->singleton('mug', function ($app) {
+        $this->app->singleton('mug', function (Application $app): Mug {
+            $store = config('mug.token_cache_store');
+
             return new Mug(
-                config('mug.client_id'),
-                config('mug.secret'),
-                config('mug.endpoint'),
+                (string) config('mug.client_id'),
+                (string) config('mug.secret'),
+                (string) config('mug.endpoint'),
+                $app->make(CacheFactory::class)->store(is_string($store) && $store !== '' ? $store : null),
             );
         });
 
+        $this->app->alias('mug', Mug::class);
+    }
+
+    public function boot(): void
+    {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../../config/config.php' => config_path('mug.php'),
-            ], 'pdf-config');
+                __DIR__.'/../../config/config.php' => config_path('mug.php'),
+            ], ['mug-config', 'pdf-config']);
         }
     }
 }

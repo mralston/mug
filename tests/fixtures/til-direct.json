@@ -1,0 +1,29 @@
+{
+  "apiVersion": "v1",
+  "uri": "https://api-home.example.invalid/request/Til/Direct",
+  "tilDto": {
+    "electricityTariffInformationLabel": {
+      "supplier": "Example Energy",
+      "tariffName": "Example Night Saver",
+      "tariffType": "Fixed",
+      "paymentMethod": "Monthly Direct Debit",
+      "unitRateDay": "29.104p/kWh",
+      "unitRateDayPrimary": null,
+      "unitRateDaySecondary": null,
+      "unitRateNight": "13.650p/kWh",
+      "standingCharge": "51.21p/day",
+      "tariffEndsOn": "30/11/2027",
+      "priceGuaranteedUntil": "30/11/2027",
+      "exitFees": "None",
+      "discountsAndAdditionalCharges": ["None"],
+      "additionalProductsAndServices": ["None"],
+      "assumedAnnualConsumption": "4,200 kWh",
+      "assumedAnnualCost": "£1,038.21",
+      "tariffComparisonRate": "24.71p/kWh",
+      "caveat": "Your costs may differ.",
+      "fixedMonths": 12,
+      "fixedDynamic": false
+    },
+    "gasTariffInformationLabel": null
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "postcodeReadyDto": {
+    "postcodeIsSwitchable": true,
+    "suggestedFormat": "ZZ99 9ZZ",
+    "groupId": "1",
+    "gspGroupId": "_J",
+    "gspRegionId": "19"
+  },
+  "apiVersion": "v1",
+  "uri": "https://api-home.example.invalid/request/Address/Postcode/Ready"
+}
