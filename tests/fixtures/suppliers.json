@@ -1,0 +1,14 @@
+{
+  "apiVersion": "v1",
+  "uri": "https://api-home.example.invalid/request/Suppliers",
+  "suppliersDto": {
+    "dualConsolidatedSuppliers": [
+      {"id": 9001, "name": "Example Energy", "websiteUrl": "https://example.invalid", "billSampleUrl": null, "hasWarmHomeDiscount": true}
+    ],
+    "electricitySuppliers": [
+      {"id": 9001, "name": "Example Energy", "websiteUrl": "https://example.invalid", "billSampleUrl": null, "hasWarmHomeDiscount": true},
+      {"id": 9002, "name": "Sample Power", "websiteUrl": "https://sample.invalid", "billSampleUrl": null, "hasWarmHomeDiscount": false}
+    ],
+    "gasSuppliers": []
+  }
+}

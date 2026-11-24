@@ -4,7 +4,8 @@
     "keywords": [
         "mralston",
         "laravel",
-        "pdf"
+        "my utility genius",
+        "energy tariffs"
     ],
     "homepage": "https://github.com/mralston/mug",
     "license": "MIT",
@@ -16,17 +17,37 @@
         }
     ],
     "require": {
-        "php": "^7.4.15|^8.0",
-        "illuminate/http": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0"
+        "php": "^8.4",
+        "ext-json": "*",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "nesbot/carbon": "^3.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^4.0"
     },
     "autoload": {
         "psr-4": {
             "Mralston\\Mug\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Mralston\\Mug\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {

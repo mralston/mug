@@ -1,0 +1,19 @@
+{
+  "apiVersion": "v1",
+  "uri": "https://api-home.example.invalid/request/Tariffs/export",
+  "tariffsDto": {
+    "tariffs": [
+      {
+        "id": 900201,
+        "name": "Example Export Flex",
+        "isDefaultOrStandard": false,
+        "dnoAreaId": 19,
+        "dnoAreaName": "South Eastern",
+        "isDefaultOrStandardPaperBilling": false,
+        "isDefaultOrStandardPaperlessBilling": false,
+        "isFixedFromEnergyStartDate": false,
+        "isFixed": false
+      }
+    ]
+  }
+}

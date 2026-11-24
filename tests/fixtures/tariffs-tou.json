@@ -1,0 +1,78 @@
+[
+  {
+    "tariffId": 900101,
+    "supplierId": 9001,
+    "tariffName": "Example Three Rate",
+    "supplierName": "Example Energy",
+    "validFromDate": "2026-10-01T00:00:00",
+    "validToDate": "2027-03-31T23:59:59",
+    "liveRemovalDate": null,
+    "isLive": true,
+    "isSwitchable": true,
+    "isGreen": true,
+    "isFixed": false,
+    "isFixedFromStartDate": false,
+    "isSmartMeter": true,
+    "fixedTermMonths": "0",
+    "tosUrl": "https://example.invalid/terms",
+    "hasExitFee": false,
+    "hasReward": false,
+    "hasWinterPremium": true,
+    "isStandard": false,
+    "standardTaridffId": 900100,
+    "priceType": 1,
+    "isPriceIncVAT": true,
+    "prices": [
+      {
+        "dno": 19,
+        "paymentId": 1,
+        "isDualFuel": false,
+        "electricity": [
+          {
+            "standingCharge": 48.79,
+            "unitRate": 16.4115,
+            "displayName": "Off peak",
+            "monthFrom": "1",
+            "monthTo": "12",
+            "weekdayFrom": "1",
+            "weekdayTo": "7",
+            "timeFrom": "02:00",
+            "timeTo": "05:00",
+            "productCode": "EXAMPLE-3R-OFF",
+            "thresholdUnits": 0,
+            "thresholdDays": 0
+          },
+          {
+            "standingCharge": 48.79,
+            "unitRate": 38.6,
+            "displayName": "Winter weekday peak",
+            "monthFrom": "10",
+            "monthTo": "3",
+            "weekdayFrom": "1",
+            "weekdayTo": "5",
+            "timeFrom": "16:00",
+            "timeTo": "19:00",
+            "productCode": "EXAMPLE-3R-PEAK",
+            "thresholdUnits": 0,
+            "thresholdDays": 0
+          },
+          {
+            "standingCharge": 48.79,
+            "unitRate": 2.73E1,
+            "displayName": "Standard",
+            "monthFrom": "1",
+            "monthTo": "12",
+            "weekdayFrom": "1",
+            "weekdayTo": "7",
+            "timeFrom": "00:00",
+            "timeTo": "00:00",
+            "productCode": "EXAMPLE-3R-STD",
+            "thresholdUnits": 0,
+            "thresholdDays": 0
+          }
+        ],
+        "gas": []
+      }
+    ]
+  }
+]

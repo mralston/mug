@@ -1,0 +1,30 @@
+{
+  "apiVersion": "v1",
+  "uri": "https://api-home.example.invalid/request/Tariffs/live",
+  "tariffsDto": {
+    "tariffs": [
+      {
+        "id": 900101,
+        "name": "Example Three Rate",
+        "isDefaultOrStandard": false,
+        "dnoAreaId": 19,
+        "dnoAreaName": "South Eastern",
+        "isDefaultOrStandardPaperBilling": false,
+        "isDefaultOrStandardPaperlessBilling": false,
+        "isFixedFromEnergyStartDate": false,
+        "isFixed": false
+      },
+      {
+        "id": 900100,
+        "name": "Example Standard Variable",
+        "isDefaultOrStandard": true,
+        "dnoAreaId": 19,
+        "dnoAreaName": "South Eastern",
+        "isDefaultOrStandardPaperBilling": true,
+        "isDefaultOrStandardPaperlessBilling": true,
+        "isFixedFromEnergyStartDate": false,
+        "isFixed": false
+      }
+    ]
+  }
+}
